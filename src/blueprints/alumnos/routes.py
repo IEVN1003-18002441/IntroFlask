@@ -183,7 +183,7 @@ def registrar_alumno():
         if cursor is not None:
             cursor.close()
 
-@alumnos_bp.route("<string:matricula>", methods=['PUT'])
+@alumnos_bp.route("/<string:matricula>", methods=['PUT'])
 def modificar_alumno(matricula):
     datos = request.get_json(silent=True)
     
